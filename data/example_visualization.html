@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Maia-2 Multi-Rating Visualization (ONNX)</title>
+
+        <style>
+        body { font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 20px; color: #333; font-size: 13px; }
+        h1, h2, h3 { color: #1f2d3d; }
+        h3 { font-size: 1.2em; margin-bottom: 0.5em; }
+        table { border-collapse: collapse; margin: 1rem 0; font-size: 12px; }
+        th, td { border: 1px solid #ddd; padding: 4px 8px; text-align: left; white-space: nowrap; }
+        th { background-color: #f5f7fa; font-weight: bold; }
+        .meta { margin-bottom: 1.5rem; font-size: 12px; }
+        .position { border: 1px solid #ccc; padding: 12px; margin-bottom: 20px; border-radius: 4px; background: #fafafa; }
+        .position h3 { margin-top: 0; }
+        .board { margin: 0.5rem 0; }
+        .compact-table { width: auto; }
+        .compact-table th { text-align: center; }
+        .compact-table td { text-align: left; font-size: 11px; }
+        .compact-table td:first-child { font-weight: bold; text-align: center; background-color: #f9f9f9; }
+        .small { font-size: 0.85em; color: #555; }
+        </style>
+        
+</head>
+<body>
+<h1>Maia-2 Multi-Rating Visualization (ONNX)</h1>
+<div class="meta">
+<strong>Model:</strong> model.onnx | 
+<strong>SFEN:</strong> example_sfen.txt | 
+<strong>Positions:</strong> 6
+</div>
+<div class="position">
+<h3>Position 1</h3>
+<p class="small">lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-pawn" x="180.5" y="50.5" /><use xlink:href="#black-pawn" x="180.5" y="130.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-bishop" x="160.5" y="30.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="130.5" /><use xlink:href="#black-rook" x="160.5" y="150.5" /><use xlink:href="#black-knight" x="160.5" y="170.5" /><use xlink:href="#white-silver" x="140.5" y="10.5" /><use xlink:href="#white-pawn" x="140.5" y="50.5" /><use xlink:href="#black-pawn" x="140.5" y="130.5" /><use xlink:href="#black-silver" x="140.5" y="170.5" /><use xlink:href="#white-gold" x="120.5" y="10.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="130.5" /><use xlink:href="#black-gold" x="120.5" y="170.5" /><use xlink:href="#white-king" x="100.5" y="10.5" /><use xlink:href="#white-pawn" x="100.5" y="50.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#black-king" x="100.5" y="170.5" /><use xlink:href="#white-gold" x="80.5" y="10.5" /><use xlink:href="#white-pawn" x="80.5" y="50.5" /><use xlink:href="#black-pawn" x="80.5" y="130.5" /><use xlink:href="#black-gold" x="80.5" y="170.5" /><use xlink:href="#white-silver" x="60.5" y="10.5" /><use xlink:href="#white-pawn" x="60.5" y="50.5" /><use xlink:href="#black-pawn" x="60.5" y="130.5" /><use xlink:href="#black-silver" x="60.5" y="170.5" /><use xlink:href="#white-knight" x="40.5" y="10.5" /><use xlink:href="#white-rook" x="40.5" y="30.5" /><use xlink:href="#white-pawn" x="40.5" y="50.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-bishop" x="40.5" y="150.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="50.5" /><use xlink:href="#black-pawn" x="20.5" y="130.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="176">&#25163;</text><text font-family="serif" font-size="14" x="214" y="162">&#20808;</text><text font-family="serif" font-size="14" x="214" y="148">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-24" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-38" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-52" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.624</td>
+<td>▲７六歩 (0.655)</td>
+<td>▲２六歩 (0.235)</td>
+<td>▲５六歩 (0.061)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲５八飛 (0.008)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.625</td>
+<td>▲７六歩 (0.667)</td>
+<td>▲２六歩 (0.226)</td>
+<td>▲５六歩 (0.064)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲５八飛 (0.007)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.625</td>
+<td>▲７六歩 (0.683)</td>
+<td>▲２六歩 (0.209)</td>
+<td>▲５六歩 (0.067)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲５八飛 (0.006)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.625</td>
+<td>▲７六歩 (0.683)</td>
+<td>▲２六歩 (0.215)</td>
+<td>▲５六歩 (0.063)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲７八飛 (0.006)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.625</td>
+<td>▲７六歩 (0.675)</td>
+<td>▲２六歩 (0.229)</td>
+<td>▲５六歩 (0.059)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲６八銀 (0.006)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.625</td>
+<td>▲７六歩 (0.664)</td>
+<td>▲２六歩 (0.245)</td>
+<td>▲５六歩 (0.058)</td>
+<td>▲９六歩 (0.008)</td>
+<td>▲６八銀 (0.006)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.627</td>
+<td>▲７六歩 (0.651)</td>
+<td>▲２六歩 (0.261)</td>
+<td>▲５六歩 (0.057)</td>
+<td>▲９六歩 (0.007)</td>
+<td>▲７八飛 (0.006)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.627</td>
+<td>▲７六歩 (0.652)</td>
+<td>▲２六歩 (0.259)</td>
+<td>▲５六歩 (0.057)</td>
+<td>▲７八飛 (0.008)</td>
+<td>▲９六歩 (0.006)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.627</td>
+<td>▲７六歩 (0.650)</td>
+<td>▲２六歩 (0.263)</td>
+<td>▲５六歩 (0.054)</td>
+<td>▲７八飛 (0.009)</td>
+<td>▲４八銀 (0.005)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.626</td>
+<td>▲７六歩 (0.678)</td>
+<td>▲２六歩 (0.238)</td>
+<td>▲５六歩 (0.049)</td>
+<td>▲７八飛 (0.010)</td>
+<td>▲４八銀 (0.007)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.625</td>
+<td>▲７六歩 (0.695)</td>
+<td>▲２六歩 (0.220)</td>
+<td>▲５六歩 (0.047)</td>
+<td>▲７八飛 (0.012)</td>
+<td>▲４八銀 (0.008)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.625</td>
+<td>▲７六歩 (0.688)</td>
+<td>▲２六歩 (0.217)</td>
+<td>▲５六歩 (0.048)</td>
+<td>▲７八飛 (0.020)</td>
+<td>▲４八銀 (0.008)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.625</td>
+<td>▲７六歩 (0.662)</td>
+<td>▲２六歩 (0.238)</td>
+<td>▲５六歩 (0.048)</td>
+<td>▲７八飛 (0.026)</td>
+<td>▲４八銀 (0.008)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.625</td>
+<td>▲７六歩 (0.646)</td>
+<td>▲２六歩 (0.257)</td>
+<td>▲５六歩 (0.048)</td>
+<td>▲７八飛 (0.026)</td>
+<td>▲４八銀 (0.007)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.625</td>
+<td>▲７六歩 (0.641)</td>
+<td>▲２六歩 (0.260)</td>
+<td>▲５六歩 (0.051)</td>
+<td>▲７八飛 (0.026)</td>
+<td>▲４八銀 (0.006)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.625</td>
+<td>▲７六歩 (0.613)</td>
+<td>▲２六歩 (0.282)</td>
+<td>▲５六歩 (0.055)</td>
+<td>▲７八飛 (0.029)</td>
+<td>▲４八銀 (0.006)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.625</td>
+<td>▲７六歩 (0.563)</td>
+<td>▲２六歩 (0.327)</td>
+<td>▲５六歩 (0.057)</td>
+<td>▲７八飛 (0.032)</td>
+<td>▲４八銀 (0.005)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.625</td>
+<td>▲７六歩 (0.512)</td>
+<td>▲２六歩 (0.366)</td>
+<td>▲５六歩 (0.062)</td>
+<td>▲７八飛 (0.039)</td>
+<td>▲４八銀 (0.005)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.625</td>
+<td>▲７六歩 (0.482)</td>
+<td>▲２六歩 (0.381)</td>
+<td>▲５六歩 (0.069)</td>
+<td>▲７八飛 (0.047)</td>
+<td>▲４八銀 (0.005)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.625</td>
+<td>▲７六歩 (0.472)</td>
+<td>▲２六歩 (0.396)</td>
+<td>▲５六歩 (0.067)</td>
+<td>▲７八飛 (0.044)</td>
+<td>▲４八銀 (0.005)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="position">
+<h3>Position 2</h3>
+<p class="small">lnsgkgsnl/1r5b1/p1ppppppp/9/1p5P1/2P6/PP1PPPP1P/1B5R1/LNSGKGSNL w - 6</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-pawn" x="180.5" y="50.5" /><use xlink:href="#black-pawn" x="180.5" y="130.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-bishop" x="160.5" y="30.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="90.5" /><use xlink:href="#black-rook" x="160.5" y="150.5" /><use xlink:href="#black-knight" x="160.5" y="170.5" /><use xlink:href="#white-silver" x="140.5" y="10.5" /><use xlink:href="#white-pawn" x="140.5" y="50.5" /><use xlink:href="#black-pawn" x="140.5" y="130.5" /><use xlink:href="#black-silver" x="140.5" y="170.5" /><use xlink:href="#white-gold" x="120.5" y="10.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="130.5" /><use xlink:href="#black-gold" x="120.5" y="170.5" /><use xlink:href="#white-king" x="100.5" y="10.5" /><use xlink:href="#white-pawn" x="100.5" y="50.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#black-king" x="100.5" y="170.5" /><use xlink:href="#white-gold" x="80.5" y="10.5" /><use xlink:href="#white-pawn" x="80.5" y="50.5" /><use xlink:href="#black-pawn" x="80.5" y="130.5" /><use xlink:href="#black-gold" x="80.5" y="170.5" /><use xlink:href="#white-silver" x="60.5" y="10.5" /><use xlink:href="#white-pawn" x="60.5" y="50.5" /><use xlink:href="#black-pawn" x="60.5" y="110.5" /><use xlink:href="#black-silver" x="60.5" y="170.5" /><use xlink:href="#white-knight" x="40.5" y="10.5" /><use xlink:href="#white-rook" x="40.5" y="30.5" /><use xlink:href="#white-pawn" x="40.5" y="90.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-bishop" x="40.5" y="150.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="50.5" /><use xlink:href="#black-pawn" x="20.5" y="130.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="176">&#25163;</text><text font-family="serif" font-size="14" x="214" y="162">&#20808;</text><text font-family="serif" font-size="14" x="214" y="148">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-24" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-38" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-52" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.616</td>
+<td>△３二金 (0.836)</td>
+<td>△３四歩 (0.088)</td>
+<td>△８四飛 (0.060)</td>
+<td>△１四歩 (0.008)</td>
+<td>△８六歩 (0.005)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.616</td>
+<td>△３二金 (0.831)</td>
+<td>△３四歩 (0.092)</td>
+<td>△８四飛 (0.062)</td>
+<td>△１四歩 (0.008)</td>
+<td>△８六歩 (0.004)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.616</td>
+<td>△３二金 (0.824)</td>
+<td>△３四歩 (0.094)</td>
+<td>△８四飛 (0.066)</td>
+<td>△１四歩 (0.009)</td>
+<td>△８六歩 (0.004)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.617</td>
+<td>△３二金 (0.822)</td>
+<td>△３四歩 (0.093)</td>
+<td>△８四飛 (0.068)</td>
+<td>△１四歩 (0.010)</td>
+<td>△８六歩 (0.004)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.617</td>
+<td>△３二金 (0.834)</td>
+<td>△３四歩 (0.091)</td>
+<td>△８四飛 (0.057)</td>
+<td>△１四歩 (0.011)</td>
+<td>△８六歩 (0.003)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.617</td>
+<td>△３二金 (0.849)</td>
+<td>△３四歩 (0.093)</td>
+<td>△８四飛 (0.043)</td>
+<td>△１四歩 (0.010)</td>
+<td>△８六歩 (0.003)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.618</td>
+<td>△３二金 (0.861)</td>
+<td>△３四歩 (0.102)</td>
+<td>△８四飛 (0.026)</td>
+<td>△１四歩 (0.007)</td>
+<td>△８六歩 (0.002)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.619</td>
+<td>△３二金 (0.862)</td>
+<td>△３四歩 (0.110)</td>
+<td>△８四飛 (0.017)</td>
+<td>△１四歩 (0.007)</td>
+<td>△８六歩 (0.002)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.620</td>
+<td>△３二金 (0.865)</td>
+<td>△３四歩 (0.112)</td>
+<td>△８四飛 (0.012)</td>
+<td>△１四歩 (0.006)</td>
+<td>△８六歩 (0.002)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.620</td>
+<td>△３二金 (0.863)</td>
+<td>△３四歩 (0.118)</td>
+<td>△８四飛 (0.010)</td>
+<td>△１四歩 (0.006)</td>
+<td>△８六歩 (0.002)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.620</td>
+<td>△３二金 (0.861)</td>
+<td>△３四歩 (0.123)</td>
+<td>△８四飛 (0.007)</td>
+<td>△１四歩 (0.005)</td>
+<td>△３二銀 (0.002)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.620</td>
+<td>△３二金 (0.851)</td>
+<td>△３四歩 (0.135)</td>
+<td>△８四飛 (0.005)</td>
+<td>△１四歩 (0.004)</td>
+<td>△３二銀 (0.002)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.620</td>
+<td>△３二金 (0.831)</td>
+<td>△３四歩 (0.157)</td>
+<td>△８四飛 (0.005)</td>
+<td>△１四歩 (0.004)</td>
+<td>△３二銀 (0.002)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.620</td>
+<td>△３二金 (0.835)</td>
+<td>△３四歩 (0.155)</td>
+<td>△８四飛 (0.004)</td>
+<td>△１四歩 (0.003)</td>
+<td>△３二銀 (0.001)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.620</td>
+<td>△３二金 (0.853)</td>
+<td>△３四歩 (0.139)</td>
+<td>△１四歩 (0.003)</td>
+<td>△８四飛 (0.003)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.620</td>
+<td>△３二金 (0.862)</td>
+<td>△３四歩 (0.131)</td>
+<td>△１四歩 (0.002)</td>
+<td>△８四飛 (0.002)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.620</td>
+<td>△３二金 (0.868)</td>
+<td>△３四歩 (0.126)</td>
+<td>△１四歩 (0.002)</td>
+<td>△８四飛 (0.002)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.620</td>
+<td>△３二金 (0.873)</td>
+<td>△３四歩 (0.123)</td>
+<td>△１四歩 (0.001)</td>
+<td>△８四飛 (0.001)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.620</td>
+<td>△３二金 (0.877)</td>
+<td>△３四歩 (0.118)</td>
+<td>△１四歩 (0.001)</td>
+<td>△８四飛 (0.001)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.620</td>
+<td>△３二金 (0.878)</td>
+<td>△３四歩 (0.118)</td>
+<td>△１四歩 (0.001)</td>
+<td>△８四飛 (0.001)</td>
+<td>△８六歩 (0.001)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="position">
+<h3>Position 3</h3>
+<p class="small">lr5nl/3g1kg2/2n1ppsp1/p1p1s1p1p/1p1p3P1/P1PPSPP1P/1PS1P1N2/2G1G2R1/LNK5L b Bb 39</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-pawn" x="180.5" y="70.5" /><use xlink:href="#black-pawn" x="180.5" y="110.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="90.5" /><use xlink:href="#black-rook" x="160.5" y="150.5" /><use xlink:href="#white-gold" x="140.5" y="30.5" /><use xlink:href="#white-silver" x="140.5" y="50.5" /><use xlink:href="#white-pawn" x="140.5" y="70.5" /><use xlink:href="#black-pawn" x="140.5" y="110.5" /><use xlink:href="#black-knight" x="140.5" y="130.5" /><use xlink:href="#white-king" x="120.5" y="30.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="110.5" /><use xlink:href="#white-pawn" x="100.5" y="50.5" /><use xlink:href="#white-silver" x="100.5" y="70.5" /><use xlink:href="#black-silver" x="100.5" y="110.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#black-gold" x="100.5" y="150.5" /><use xlink:href="#white-gold" x="80.5" y="30.5" /><use xlink:href="#white-pawn" x="80.5" y="90.5" /><use xlink:href="#black-pawn" x="80.5" y="110.5" /><use xlink:href="#white-knight" x="60.5" y="50.5" /><use xlink:href="#white-pawn" x="60.5" y="70.5" /><use xlink:href="#black-pawn" x="60.5" y="110.5" /><use xlink:href="#black-silver" x="60.5" y="130.5" /><use xlink:href="#black-gold" x="60.5" y="150.5" /><use xlink:href="#black-king" x="60.5" y="170.5" /><use xlink:href="#white-rook" x="40.5" y="10.5" /><use xlink:href="#white-pawn" x="40.5" y="90.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="70.5" /><use xlink:href="#black-pawn" x="20.5" y="110.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="190">&#35282;</text><text font-family="serif" font-size="14" x="214" y="162">&#25163;</text><text font-family="serif" font-size="14" x="214" y="148">&#20808;</text><text font-family="serif" font-size="14" x="214" y="134">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-10" transform="rotate(180)">&#35282;</text><text font-family="serif" font-size="14" x="-16" y="-38" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-52" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-66" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.619</td>
+<td>▲６五歩 (0.817)</td>
+<td>▲４五桂 (0.027)</td>
+<td>▲７五歩 (0.026)</td>
+<td>▲３五歩 (0.026)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.619</td>
+<td>▲６五歩 (0.820)</td>
+<td>▲４五桂 (0.025)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲７五歩 (0.024)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.619</td>
+<td>▲６五歩 (0.823)</td>
+<td>▲４五桂 (0.025)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲７五歩 (0.023)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.618</td>
+<td>▲６五歩 (0.826)</td>
+<td>▲３五歩 (0.024)</td>
+<td>▲４五桂 (0.024)</td>
+<td>▲７五歩 (0.022)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.617</td>
+<td>▲６五歩 (0.829)</td>
+<td>▲３五歩 (0.024)</td>
+<td>▲４五桂 (0.024)</td>
+<td>▲７五歩 (0.021)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.617</td>
+<td>▲６五歩 (0.832)</td>
+<td>▲３五歩 (0.024)</td>
+<td>▲４五桂 (0.023)</td>
+<td>▲７五歩 (0.021)</td>
+<td>▲６七金右 (0.017)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.616</td>
+<td>▲６五歩 (0.832)</td>
+<td>▲３五歩 (0.024)</td>
+<td>▲４五桂 (0.022)</td>
+<td>▲７五歩 (0.020)</td>
+<td>▲６七金右 (0.018)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.615</td>
+<td>▲６五歩 (0.831)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲４五桂 (0.022)</td>
+<td>▲７五歩 (0.020)</td>
+<td>▲６七金右 (0.019)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.615</td>
+<td>▲６五歩 (0.829)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲４五桂 (0.023)</td>
+<td>▲７五歩 (0.019)</td>
+<td>▲４七金 (0.019)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.615</td>
+<td>▲６五歩 (0.830)</td>
+<td>▲３五歩 (0.026)</td>
+<td>▲４五桂 (0.023)</td>
+<td>▲７五歩 (0.019)</td>
+<td>▲４七金 (0.018)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.614</td>
+<td>▲６五歩 (0.832)</td>
+<td>▲３五歩 (0.026)</td>
+<td>▲４五桂 (0.023)</td>
+<td>▲７五歩 (0.019)</td>
+<td>▲４七金 (0.018)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.613</td>
+<td>▲６五歩 (0.840)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲４五桂 (0.023)</td>
+<td>▲７五歩 (0.017)</td>
+<td>▲４七金 (0.016)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.613</td>
+<td>▲６五歩 (0.844)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲４五桂 (0.022)</td>
+<td>▲７五歩 (0.016)</td>
+<td>▲６七金右 (0.016)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.612</td>
+<td>▲６五歩 (0.846)</td>
+<td>▲３五歩 (0.025)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲７五歩 (0.016)</td>
+<td>▲６七金右 (0.015)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.612</td>
+<td>▲６五歩 (0.844)</td>
+<td>▲３五歩 (0.026)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲７五歩 (0.016)</td>
+<td>▲６七金右 (0.016)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.612</td>
+<td>▲６五歩 (0.842)</td>
+<td>▲３五歩 (0.027)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲７五歩 (0.016)</td>
+<td>▲６七金右 (0.016)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.612</td>
+<td>▲６五歩 (0.841)</td>
+<td>▲３五歩 (0.026)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲７五歩 (0.016)</td>
+<td>▲６七金右 (0.016)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.612</td>
+<td>▲６五歩 (0.839)</td>
+<td>▲３五歩 (0.027)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲６七金右 (0.016)</td>
+<td>▲７五歩 (0.016)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.612</td>
+<td>▲６五歩 (0.837)</td>
+<td>▲３五歩 (0.027)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲６七金右 (0.017)</td>
+<td>▲７五歩 (0.016)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.612</td>
+<td>▲６五歩 (0.837)</td>
+<td>▲３五歩 (0.027)</td>
+<td>▲４五桂 (0.021)</td>
+<td>▲６七金右 (0.017)</td>
+<td>▲７五歩 (0.016)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="position">
+<h3>Position 4</h3>
+<p class="small">lr5nl/2g2kg2/3Pppsp1/p1p3p1p/1p1s3P1/P1P2PP1P/1PS1P1N2/2G1G2R1/LNK5L b BNbsp 45</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-pawn" x="180.5" y="70.5" /><use xlink:href="#black-pawn" x="180.5" y="110.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="90.5" /><use xlink:href="#black-rook" x="160.5" y="150.5" /><use xlink:href="#white-gold" x="140.5" y="30.5" /><use xlink:href="#white-silver" x="140.5" y="50.5" /><use xlink:href="#white-pawn" x="140.5" y="70.5" /><use xlink:href="#black-pawn" x="140.5" y="110.5" /><use xlink:href="#black-knight" x="140.5" y="130.5" /><use xlink:href="#white-king" x="120.5" y="30.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="110.5" /><use xlink:href="#white-pawn" x="100.5" y="50.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#black-gold" x="100.5" y="150.5" /><use xlink:href="#black-pawn" x="80.5" y="50.5" /><use xlink:href="#white-silver" x="80.5" y="90.5" /><use xlink:href="#white-gold" x="60.5" y="30.5" /><use xlink:href="#white-pawn" x="60.5" y="70.5" /><use xlink:href="#black-pawn" x="60.5" y="110.5" /><use xlink:href="#black-silver" x="60.5" y="130.5" /><use xlink:href="#black-gold" x="60.5" y="150.5" /><use xlink:href="#black-king" x="60.5" y="170.5" /><use xlink:href="#white-rook" x="40.5" y="10.5" /><use xlink:href="#white-pawn" x="40.5" y="90.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="70.5" /><use xlink:href="#black-pawn" x="20.5" y="110.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="190">&#26690;</text><text font-family="serif" font-size="14" x="214" y="176">&#35282;</text><text font-family="serif" font-size="14" x="214" y="148">&#25163;</text><text font-family="serif" font-size="14" x="214" y="134">&#20808;</text><text font-family="serif" font-size="14" x="214" y="120">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-10" transform="rotate(180)">&#27497;</text><text font-family="serif" font-size="14" x="-16" y="-24" transform="rotate(180)">&#37504;</text><text font-family="serif" font-size="14" x="-16" y="-38" transform="rotate(180)">&#35282;</text><text font-family="serif" font-size="14" x="-16" y="-66" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-80" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-94" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.638</td>
+<td>▲６四桂 (0.599)</td>
+<td>▲４五桂 (0.198)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.034)</td>
+<td>▲３五歩 (0.026)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.638</td>
+<td>▲６四桂 (0.596)</td>
+<td>▲４五桂 (0.199)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.034)</td>
+<td>▲３五歩 (0.026)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.639</td>
+<td>▲６四桂 (0.596)</td>
+<td>▲４五桂 (0.200)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.034)</td>
+<td>▲３五歩 (0.026)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.639</td>
+<td>▲６四桂 (0.594)</td>
+<td>▲４五桂 (0.200)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.035)</td>
+<td>▲３五歩 (0.027)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.638</td>
+<td>▲６四桂 (0.595)</td>
+<td>▲４五桂 (0.198)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.035)</td>
+<td>▲３五歩 (0.027)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.638</td>
+<td>▲６四桂 (0.593)</td>
+<td>▲４五桂 (0.199)</td>
+<td>▲４五桂打 (0.050)</td>
+<td>▲２四歩 (0.034)</td>
+<td>▲３五歩 (0.028)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.637</td>
+<td>▲６四桂 (0.587)</td>
+<td>▲４五桂 (0.201)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.035)</td>
+<td>▲３五歩 (0.028)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.636</td>
+<td>▲６四桂 (0.584)</td>
+<td>▲４五桂 (0.200)</td>
+<td>▲４五桂打 (0.051)</td>
+<td>▲２四歩 (0.036)</td>
+<td>▲３五歩 (0.029)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.636</td>
+<td>▲６四桂 (0.585)</td>
+<td>▲４五桂 (0.195)</td>
+<td>▲４五桂打 (0.052)</td>
+<td>▲２四歩 (0.036)</td>
+<td>▲３五歩 (0.029)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.635</td>
+<td>▲６四桂 (0.589)</td>
+<td>▲４五桂 (0.191)</td>
+<td>▲４五桂打 (0.052)</td>
+<td>▲２四歩 (0.036)</td>
+<td>▲３五歩 (0.030)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.634</td>
+<td>▲６四桂 (0.586)</td>
+<td>▲４五桂 (0.189)</td>
+<td>▲４五桂打 (0.052)</td>
+<td>▲２四歩 (0.036)</td>
+<td>▲３五歩 (0.030)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.632</td>
+<td>▲６四桂 (0.582)</td>
+<td>▲４五桂 (0.190)</td>
+<td>▲４五桂打 (0.053)</td>
+<td>▲２四歩 (0.037)</td>
+<td>▲３五歩 (0.031)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.631</td>
+<td>▲６四桂 (0.572)</td>
+<td>▲４五桂 (0.194)</td>
+<td>▲４五桂打 (0.054)</td>
+<td>▲２四歩 (0.039)</td>
+<td>▲３五歩 (0.032)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.630</td>
+<td>▲６四桂 (0.566)</td>
+<td>▲４五桂 (0.193)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.040)</td>
+<td>▲３五歩 (0.033)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.630</td>
+<td>▲６四桂 (0.565)</td>
+<td>▲４五桂 (0.188)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.040)</td>
+<td>▲３五歩 (0.034)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.629</td>
+<td>▲６四桂 (0.563)</td>
+<td>▲４五桂 (0.186)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.041)</td>
+<td>▲３五歩 (0.035)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.628</td>
+<td>▲６四桂 (0.561)</td>
+<td>▲４五桂 (0.184)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.041)</td>
+<td>▲３五歩 (0.036)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.628</td>
+<td>▲６四桂 (0.557)</td>
+<td>▲４五桂 (0.182)</td>
+<td>▲４五桂打 (0.054)</td>
+<td>▲２四歩 (0.042)</td>
+<td>▲３五歩 (0.037)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.627</td>
+<td>▲６四桂 (0.550)</td>
+<td>▲４五桂 (0.181)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.043)</td>
+<td>▲３五歩 (0.038)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.627</td>
+<td>▲６四桂 (0.551)</td>
+<td>▲４五桂 (0.180)</td>
+<td>▲４五桂打 (0.055)</td>
+<td>▲２四歩 (0.043)</td>
+<td>▲３五歩 (0.039)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="position">
+<h3>Position 5</h3>
+<p class="small">ln1g3nl/4ksgb1/p2s1ppp1/2ppp3r/7Pp/P1G2PP2/1P1PPSN1P/1B1K1G3/LNS4RL b 2p 45</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-rook" x="180.5" y="70.5" /><use xlink:href="#white-pawn" x="180.5" y="90.5" /><use xlink:href="#black-pawn" x="180.5" y="130.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-bishop" x="160.5" y="30.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="90.5" /><use xlink:href="#black-rook" x="160.5" y="170.5" /><use xlink:href="#white-gold" x="140.5" y="30.5" /><use xlink:href="#white-pawn" x="140.5" y="50.5" /><use xlink:href="#black-pawn" x="140.5" y="110.5" /><use xlink:href="#black-knight" x="140.5" y="130.5" /><use xlink:href="#white-silver" x="120.5" y="30.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="110.5" /><use xlink:href="#black-silver" x="120.5" y="130.5" /><use xlink:href="#black-gold" x="120.5" y="150.5" /><use xlink:href="#white-king" x="100.5" y="30.5" /><use xlink:href="#white-pawn" x="100.5" y="70.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#white-gold" x="80.5" y="10.5" /><use xlink:href="#white-silver" x="80.5" y="50.5" /><use xlink:href="#white-pawn" x="80.5" y="70.5" /><use xlink:href="#black-pawn" x="80.5" y="130.5" /><use xlink:href="#black-king" x="80.5" y="150.5" /><use xlink:href="#white-pawn" x="60.5" y="70.5" /><use xlink:href="#black-gold" x="60.5" y="110.5" /><use xlink:href="#black-silver" x="60.5" y="170.5" /><use xlink:href="#white-knight" x="40.5" y="10.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-bishop" x="40.5" y="150.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="50.5" /><use xlink:href="#black-pawn" x="20.5" y="110.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="176">&#25163;</text><text font-family="serif" font-size="14" x="214" y="162">&#20808;</text><text font-family="serif" font-size="14" x="214" y="148">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-10" transform="rotate(180)">&#20108;</text><text font-family="serif" font-size="14" x="-16" y="-24" transform="rotate(180)">&#27497;</text><text font-family="serif" font-size="14" x="-16" y="-52" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-66" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-80" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.612</td>
+<td>▲３五歩 (0.144)</td>
+<td>▲７八銀 (0.125)</td>
+<td>▲７八玉 (0.115)</td>
+<td>▲６六歩 (0.071)</td>
+<td>▲５六歩 (0.062)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.613</td>
+<td>▲３五歩 (0.146)</td>
+<td>▲７八銀 (0.124)</td>
+<td>▲７八玉 (0.116)</td>
+<td>▲６六歩 (0.072)</td>
+<td>▲５六歩 (0.063)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.614</td>
+<td>▲３五歩 (0.146)</td>
+<td>▲７八銀 (0.124)</td>
+<td>▲７八玉 (0.119)</td>
+<td>▲６六歩 (0.072)</td>
+<td>▲５六歩 (0.064)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.614</td>
+<td>▲３五歩 (0.147)</td>
+<td>▲７八銀 (0.127)</td>
+<td>▲７八玉 (0.118)</td>
+<td>▲６六歩 (0.072)</td>
+<td>▲５六歩 (0.064)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.615</td>
+<td>▲３五歩 (0.146)</td>
+<td>▲７八銀 (0.128)</td>
+<td>▲７八玉 (0.117)</td>
+<td>▲６六歩 (0.075)</td>
+<td>▲５六歩 (0.066)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.616</td>
+<td>▲３五歩 (0.144)</td>
+<td>▲７八銀 (0.127)</td>
+<td>▲７八玉 (0.119)</td>
+<td>▲６六歩 (0.077)</td>
+<td>▲５六歩 (0.068)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.618</td>
+<td>▲３五歩 (0.142)</td>
+<td>▲７八銀 (0.125)</td>
+<td>▲７八玉 (0.124)</td>
+<td>▲６六歩 (0.079)</td>
+<td>▲５六歩 (0.070)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.619</td>
+<td>▲３五歩 (0.141)</td>
+<td>▲７八玉 (0.126)</td>
+<td>▲７八銀 (0.120)</td>
+<td>▲６六歩 (0.081)</td>
+<td>▲５六歩 (0.072)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.619</td>
+<td>▲３五歩 (0.140)</td>
+<td>▲７八玉 (0.128)</td>
+<td>▲７八銀 (0.119)</td>
+<td>▲６六歩 (0.080)</td>
+<td>▲８六金 (0.075)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.619</td>
+<td>▲３五歩 (0.141)</td>
+<td>▲７八玉 (0.128)</td>
+<td>▲７八銀 (0.118)</td>
+<td>▲６六歩 (0.077)</td>
+<td>▲５六歩 (0.075)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.619</td>
+<td>▲３五歩 (0.141)</td>
+<td>▲７八玉 (0.128)</td>
+<td>▲７八銀 (0.117)</td>
+<td>▲６六歩 (0.077)</td>
+<td>▲５六歩 (0.076)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.620</td>
+<td>▲３五歩 (0.140)</td>
+<td>▲７八玉 (0.128)</td>
+<td>▲７八銀 (0.116)</td>
+<td>▲５六歩 (0.078)</td>
+<td>▲６六歩 (0.077)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.620</td>
+<td>▲３五歩 (0.138)</td>
+<td>▲７八玉 (0.131)</td>
+<td>▲７八銀 (0.113)</td>
+<td>▲５六歩 (0.081)</td>
+<td>▲８六金 (0.077)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.621</td>
+<td>▲３五歩 (0.136)</td>
+<td>▲７八玉 (0.136)</td>
+<td>▲７八銀 (0.111)</td>
+<td>▲５六歩 (0.082)</td>
+<td>▲８六金 (0.076)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.621</td>
+<td>▲７八玉 (0.140)</td>
+<td>▲３五歩 (0.134)</td>
+<td>▲７八銀 (0.112)</td>
+<td>▲５六歩 (0.082)</td>
+<td>▲８六金 (0.078)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.621</td>
+<td>▲７八玉 (0.141)</td>
+<td>▲３五歩 (0.133)</td>
+<td>▲７八銀 (0.113)</td>
+<td>▲５六歩 (0.083)</td>
+<td>▲８六金 (0.080)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.621</td>
+<td>▲７八玉 (0.144)</td>
+<td>▲３五歩 (0.130)</td>
+<td>▲７八銀 (0.114)</td>
+<td>▲５六歩 (0.083)</td>
+<td>▲８六金 (0.082)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.621</td>
+<td>▲７八玉 (0.143)</td>
+<td>▲３五歩 (0.128)</td>
+<td>▲７八銀 (0.117)</td>
+<td>▲５六歩 (0.083)</td>
+<td>▲８六金 (0.083)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.621</td>
+<td>▲７八玉 (0.142)</td>
+<td>▲３五歩 (0.126)</td>
+<td>▲７八銀 (0.120)</td>
+<td>▲８六金 (0.085)</td>
+<td>▲５六歩 (0.084)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.622</td>
+<td>▲７八玉 (0.140)</td>
+<td>▲３五歩 (0.125)</td>
+<td>▲７八銀 (0.122)</td>
+<td>▲５六歩 (0.085)</td>
+<td>▲８六金 (0.084)</td>
+</tr>
+</tbody></table>
+</div>
+<div class="position">
+<h3>Position 6</h3>
+<p class="small">l6nl/1r2gkg2/2nsppspp/2pp2p2/pp5PP/2PP1PP2/PPS1PSN2/2GK3R1/LN3G2L b Bb 33</p>
+<div class="board"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.0" height="192.0" viewBox="0 0 230 192"><defs><g id="black-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#27497;</text></g><g id="black-lance"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39321;</text></g><g id="black-knight"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#26690;</text></g><g id="black-silver"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37504;</text></g><g id="black-gold"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#37329;</text></g><g id="black-bishop"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#35282;</text></g><g id="black-rook"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39131;</text></g><g id="black-king"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#29579;</text></g><g id="black-pro-pawn"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#12392;</text></g><g id="black-pro-lance" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#39321;</text></g><g id="black-pro-knight" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#26690;</text></g><g id="black-pro-silver" transform="scale(1.0, 0.5)"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="18">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="34">&#37504;</text></g><g id="black-horse"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#39340;</text></g><g id="black-dragon"><text font-family="serif" font-size="17" text-anchor="middle" x="10.5" y="16.5">&#40845;</text></g><g id="white-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#27497;</text></g><g id="white-lance" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39321;</text></g><g id="white-knight" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#26690;</text></g><g id="white-silver" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37504;</text></g><g id="white-gold" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#37329;</text></g><g id="white-bishop" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#35282;</text></g><g id="white-rook" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39131;</text></g><g id="white-king" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#29579;</text></g><g id="white-pro-pawn" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#12392;</text></g><g id="white-pro-lance" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#39321;</text></g><g id="white-pro-knight" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#26690;</text></g><g id="white-pro-silver" transform="scale(1.0, 0.5) rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-22">&#25104;</text><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-6">&#37504;</text></g><g id="white-horse" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#39340;</text></g><g id="white-dragon" transform="rotate(180)"><text font-family="serif" font-size="17" text-anchor="middle" x="-10.5" y="-3.5">&#40845;</text></g></defs><g stroke="black"><rect x="20" y="10" width="181" height="181" fill="none" stroke-width="1.5" /><line x1="20.5" y1="30.5" x2="200.5" y2="30.5" stroke-width="1.0" /><line x1="20.5" y1="50.5" x2="200.5" y2="50.5" stroke-width="1.0" /><line x1="20.5" y1="70.5" x2="200.5" y2="70.5" stroke-width="1.0" /><line x1="20.5" y1="90.5" x2="200.5" y2="90.5" stroke-width="1.0" /><line x1="20.5" y1="110.5" x2="200.5" y2="110.5" stroke-width="1.0" /><line x1="20.5" y1="130.5" x2="200.5" y2="130.5" stroke-width="1.0" /><line x1="20.5" y1="150.5" x2="200.5" y2="150.5" stroke-width="1.0" /><line x1="20.5" y1="170.5" x2="200.5" y2="170.5" stroke-width="1.0" /><line x1="40.5" y1="10.5" x2="40.5" y2="190.5" stroke-width="1.0" /><line x1="60.5" y1="10.5" x2="60.5" y2="190.5" stroke-width="1.0" /><line x1="80.5" y1="10.5" x2="80.5" y2="190.5" stroke-width="1.0" /><line x1="100.5" y1="10.5" x2="100.5" y2="190.5" stroke-width="1.0" /><line x1="120.5" y1="10.5" x2="120.5" y2="190.5" stroke-width="1.0" /><line x1="140.5" y1="10.5" x2="140.5" y2="190.5" stroke-width="1.0" /><line x1="160.5" y1="10.5" x2="160.5" y2="190.5" stroke-width="1.0" /><line x1="180.5" y1="10.5" x2="180.5" y2="190.5" stroke-width="1.0" /></g><g><text font-family="serif" text-anchor="middle" font-size="9" x="30.5" y="8">9</text><text font-family="serif" text-anchor="middle" font-size="9" x="50.5" y="8">8</text><text font-family="serif" text-anchor="middle" font-size="9" x="70.5" y="8">7</text><text font-family="serif" text-anchor="middle" font-size="9" x="90.5" y="8">6</text><text font-family="serif" text-anchor="middle" font-size="9" x="110.5" y="8">5</text><text font-family="serif" text-anchor="middle" font-size="9" x="130.5" y="8">4</text><text font-family="serif" text-anchor="middle" font-size="9" x="150.5" y="8">3</text><text font-family="serif" text-anchor="middle" font-size="9" x="170.5" y="8">2</text><text font-family="serif" text-anchor="middle" font-size="9" x="190.5" y="8">1</text><text font-family="serif" font-size="9" x="203.5" y="23">&#19968;</text><text font-family="serif" font-size="9" x="203.5" y="43">&#20108;</text><text font-family="serif" font-size="9" x="203.5" y="63">&#19977;</text><text font-family="serif" font-size="9" x="203.5" y="83">&#22235;</text><text font-family="serif" font-size="9" x="203.5" y="103">&#20116;</text><text font-family="serif" font-size="9" x="203.5" y="123">&#20845;</text><text font-family="serif" font-size="9" x="203.5" y="143">&#19971;</text><text font-family="serif" font-size="9" x="203.5" y="163">&#20843;</text><text font-family="serif" font-size="9" x="203.5" y="183">&#20061;</text></g><use xlink:href="#white-lance" x="180.5" y="10.5" /><use xlink:href="#white-pawn" x="180.5" y="50.5" /><use xlink:href="#black-pawn" x="180.5" y="90.5" /><use xlink:href="#black-lance" x="180.5" y="170.5" /><use xlink:href="#white-knight" x="160.5" y="10.5" /><use xlink:href="#white-pawn" x="160.5" y="50.5" /><use xlink:href="#black-pawn" x="160.5" y="90.5" /><use xlink:href="#black-rook" x="160.5" y="150.5" /><use xlink:href="#white-gold" x="140.5" y="30.5" /><use xlink:href="#white-silver" x="140.5" y="50.5" /><use xlink:href="#white-pawn" x="140.5" y="70.5" /><use xlink:href="#black-pawn" x="140.5" y="110.5" /><use xlink:href="#black-knight" x="140.5" y="130.5" /><use xlink:href="#white-king" x="120.5" y="30.5" /><use xlink:href="#white-pawn" x="120.5" y="50.5" /><use xlink:href="#black-pawn" x="120.5" y="110.5" /><use xlink:href="#black-silver" x="120.5" y="130.5" /><use xlink:href="#black-gold" x="120.5" y="170.5" /><use xlink:href="#white-gold" x="100.5" y="30.5" /><use xlink:href="#white-pawn" x="100.5" y="50.5" /><use xlink:href="#black-pawn" x="100.5" y="130.5" /><use xlink:href="#white-silver" x="80.5" y="50.5" /><use xlink:href="#white-pawn" x="80.5" y="70.5" /><use xlink:href="#black-pawn" x="80.5" y="110.5" /><use xlink:href="#black-king" x="80.5" y="150.5" /><use xlink:href="#white-knight" x="60.5" y="50.5" /><use xlink:href="#white-pawn" x="60.5" y="70.5" /><use xlink:href="#black-pawn" x="60.5" y="110.5" /><use xlink:href="#black-silver" x="60.5" y="130.5" /><use xlink:href="#black-gold" x="60.5" y="150.5" /><use xlink:href="#white-rook" x="40.5" y="30.5" /><use xlink:href="#white-pawn" x="40.5" y="90.5" /><use xlink:href="#black-pawn" x="40.5" y="130.5" /><use xlink:href="#black-knight" x="40.5" y="170.5" /><use xlink:href="#white-lance" x="20.5" y="10.5" /><use xlink:href="#white-pawn" x="20.5" y="90.5" /><use xlink:href="#black-pawn" x="20.5" y="130.5" /><use xlink:href="#black-lance" x="20.5" y="170.5" /><text font-family="serif" font-size="14" x="214" y="190">&#35282;</text><text font-family="serif" font-size="14" x="214" y="162">&#25163;</text><text font-family="serif" font-size="14" x="214" y="148">&#20808;</text><text font-family="serif" font-size="14" x="214" y="134">&#9751;</text><text font-family="serif" font-size="14" x="-16" y="-10" transform="rotate(180)">&#35282;</text><text font-family="serif" font-size="14" x="-16" y="-38" transform="rotate(180)">&#25163;</text><text font-family="serif" font-size="14" x="-16" y="-52" transform="rotate(180)">&#24460;</text><text font-family="serif" font-size="14" x="-16" y="-66" transform="rotate(180)">&#9750;</text></svg></div>
+<table class="compact-table">
+<thead><tr>
+<th>R</th><th>Value</th>
+<th>Rank1</th>
+<th>Rank2</th>
+<th>Rank3</th>
+<th>Rank4</th>
+<th>Rank5</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>800</td>
+<td>0.614</td>
+<td>▲５六銀 (0.281)</td>
+<td>▲２九飛 (0.270)</td>
+<td>▲４八金 (0.262)</td>
+<td>▲５八金 (0.100)</td>
+<td>▲７九玉 (0.023)</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.614</td>
+<td>▲５六銀 (0.279)</td>
+<td>▲４八金 (0.277)</td>
+<td>▲２九飛 (0.257)</td>
+<td>▲５八金 (0.106)</td>
+<td>▲７九玉 (0.023)</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.615</td>
+<td>▲４八金 (0.288)</td>
+<td>▲５六銀 (0.279)</td>
+<td>▲２九飛 (0.242)</td>
+<td>▲５八金 (0.113)</td>
+<td>▲７九玉 (0.022)</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>0.615</td>
+<td>▲４八金 (0.303)</td>
+<td>▲５六銀 (0.279)</td>
+<td>▲２九飛 (0.229)</td>
+<td>▲５八金 (0.117)</td>
+<td>▲７九玉 (0.021)</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>0.615</td>
+<td>▲４八金 (0.315)</td>
+<td>▲５六銀 (0.279)</td>
+<td>▲２九飛 (0.219)</td>
+<td>▲５八金 (0.121)</td>
+<td>▲７九玉 (0.020)</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>0.615</td>
+<td>▲４八金 (0.325)</td>
+<td>▲５六銀 (0.274)</td>
+<td>▲２九飛 (0.215)</td>
+<td>▲５八金 (0.124)</td>
+<td>▲７九玉 (0.019)</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>0.616</td>
+<td>▲４八金 (0.346)</td>
+<td>▲５六銀 (0.262)</td>
+<td>▲２九飛 (0.201)</td>
+<td>▲５八金 (0.134)</td>
+<td>▲７九玉 (0.018)</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>0.616</td>
+<td>▲４八金 (0.367)</td>
+<td>▲５六銀 (0.247)</td>
+<td>▲２九飛 (0.187)</td>
+<td>▲５八金 (0.147)</td>
+<td>▲７九玉 (0.017)</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>0.616</td>
+<td>▲４八金 (0.407)</td>
+<td>▲５六銀 (0.221)</td>
+<td>▲２九飛 (0.172)</td>
+<td>▲５八金 (0.155)</td>
+<td>▲７九玉 (0.015)</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>0.616</td>
+<td>▲４八金 (0.421)</td>
+<td>▲５六銀 (0.209)</td>
+<td>▲５八金 (0.164)</td>
+<td>▲２九飛 (0.163)</td>
+<td>▲７九玉 (0.014)</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>0.617</td>
+<td>▲４八金 (0.425)</td>
+<td>▲５六銀 (0.199)</td>
+<td>▲５八金 (0.176)</td>
+<td>▲２九飛 (0.160)</td>
+<td>▲７九玉 (0.014)</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>0.618</td>
+<td>▲４八金 (0.424)</td>
+<td>▲５八金 (0.194)</td>
+<td>▲５六銀 (0.185)</td>
+<td>▲２九飛 (0.161)</td>
+<td>▲７九玉 (0.012)</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>0.618</td>
+<td>▲４八金 (0.428)</td>
+<td>▲５八金 (0.197)</td>
+<td>▲５六銀 (0.178)</td>
+<td>▲２九飛 (0.164)</td>
+<td>▲７九玉 (0.011)</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>0.619</td>
+<td>▲４八金 (0.435)</td>
+<td>▲５八金 (0.208)</td>
+<td>▲５六銀 (0.171)</td>
+<td>▲２九飛 (0.155)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>0.619</td>
+<td>▲４八金 (0.432)</td>
+<td>▲５八金 (0.216)</td>
+<td>▲５六銀 (0.165)</td>
+<td>▲２九飛 (0.154)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>0.620</td>
+<td>▲４八金 (0.431)</td>
+<td>▲５八金 (0.227)</td>
+<td>▲５六銀 (0.156)</td>
+<td>▲２九飛 (0.154)</td>
+<td>▲７九玉 (0.011)</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>0.620</td>
+<td>▲４八金 (0.429)</td>
+<td>▲５八金 (0.225)</td>
+<td>▲２九飛 (0.158)</td>
+<td>▲５六銀 (0.156)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>0.620</td>
+<td>▲４八金 (0.426)</td>
+<td>▲５八金 (0.226)</td>
+<td>▲２九飛 (0.164)</td>
+<td>▲５六銀 (0.153)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>0.620</td>
+<td>▲４八金 (0.420)</td>
+<td>▲５八金 (0.230)</td>
+<td>▲２九飛 (0.167)</td>
+<td>▲５六銀 (0.151)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>0.620</td>
+<td>▲４八金 (0.422)</td>
+<td>▲５八金 (0.237)</td>
+<td>▲２九飛 (0.160)</td>
+<td>▲５六銀 (0.149)</td>
+<td>▲７九玉 (0.010)</td>
+</tr>
+</tbody></table>
+</div>
+</body></html>
